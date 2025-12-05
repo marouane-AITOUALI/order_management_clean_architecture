@@ -1,5 +1,68 @@
 # Travail Pratique
 
+## Installation et Lancement
+
+```bash
+cd infrastructure
+npm install
+npm run dev
+```
+
+L'API sera accessible sur `http://localhost:3000`
+
+## Endpoints API
+
+### POST /orders
+
+Créer une nouvelle commande
+
+```json
+{
+  "lines": [
+    { "productId": "PROD-1", "quantity": 2, "unitPrice": 10.5 },
+    { "productId": "PROD-2", "quantity": 1, "unitPrice": 25 }
+  ]
+}
+```
+
+### GET /orders
+
+Lister toutes les commandes
+
+### GET /orders/:orderId
+
+Récupérer une commande
+
+### POST /orders/:orderId/cancel
+
+Annuler une commande
+
+### POST /orders/:orderId/lines
+
+Ajouter une ligne de commande
+
+```json
+{
+  "productId": "PROD-3",
+  "quantity": 3,
+  "unitPrice": 15
+}
+```
+
+### PUT /orders/:orderId/lines/:lineId
+
+Modifier la quantité d'une ligne
+
+```json
+{
+  "quantity": 5
+}
+```
+
+### DELETE /orders/:orderId/lines/:lineId
+
+Supprimer une ligne de commande
+
 ## Fonctionnalités (15 points)
 
 - Mettre en place une infrastructure avec l'implémentation de votre choix (in-memory, sqlite, ...) pour persister les données.
