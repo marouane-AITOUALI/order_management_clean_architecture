@@ -71,7 +71,7 @@ Modifier la quantité d'une ligne
 
 Supprimer une ligne de commande
 
-## Fonctionnalités (15 points)
+## Fonctionnalités
 
 - Mettre en place une infrastructure avec l'implémentation de votre choix (in-memory, sqlite, ...) pour persister les données.
 - Pouvoir placer un ordre de commande.
