@@ -10,6 +10,14 @@ npm run dev
 
 L'API sera accessible sur `http://localhost:3000`
 
+### Avec Docker
+
+```bash
+cd infrastructure
+docker build -t order-api .
+docker run -p 3000:3000 order-api
+```
+
 ## Endpoints API
 
 ### POST /orders
